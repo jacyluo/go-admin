@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: help wanted
         if: github.event.label.name == 'help wanted'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'create-comment'
           token: ${{ secrets.ADMIN_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
             ![giphy](https://user-images.githubusercontent.com/507615/62342668-4735dc00-b51a-11e9-92a7-d46fbb1cc0c7.gif)
       - name: 🤔 Need Reproduce
         if: github.event.label.name == '🤔 Need Reproduce'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'create-comment'
           token: ${{ secrets.ADMIN_TOKEN }}
@@ -40,7 +40,7 @@ jobs:
             ![](https://gw.alipayobjects.com/zos/antfincdn/y9kwg7DVCd/reproduce.gif)
       - name: Usage
         if: github.event.label.name == 'Usage' || github.event.label.name == 'Question'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'create-comment,close-issue'
           token: ${{ secrets.ADMIN_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
             你好 @${{ github.event.issue.user.login }}，go-admin Issue 板块是用于 bug 反馈与需求讨论的地方。请[勿询问如何使用的问题](https://github.com/go-admin-te/ant-design/issues/699)，你可以试着在 [antd discussions](https://github.com/ant-design/ant-design/discussions) 新开一个 discussion，选择 `Q&A` 类别进行提问，也可以在 [Stack Overflow](https://stackoverflow.com/questions/tagged/antd) 或者 [Segment Fault](https://segmentfault.com/t/antd) 中提问（记得添加 `antd` 和 `react` 标签哦~）。
       - name: 3.x
         if: github.event.label.name == '3.x'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'create-comment,close-issue'
           token: ${{ secrets.ADMIN_TOKEN }}
@@ -60,7 +60,7 @@ jobs:
             你好 @${{ github.event.issue.user.login }}，当前版本（3.x）已经过了维护期。我们不会再接受对其的相关 PR 与 issue。当前 topic 会被自动关闭。
       - name: invalid
         if: github.event.label.name == 'Invalid'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'create-comment,close-issue'
           token: ${{ secrets.ADMIN_TOKEN }}
@@ -70,7 +70,7 @@ jobs:
             你好 @${{ github.event.issue.user.login }}，为了能够进行高效沟通，我们对 issue 有一定的格式要求，你的 issue 因为不符合要求而被自动关闭。你可以通过 [issue 助手](https://new-issue.go-admin.dev) 来创建 issue 以方便我们定位错误。谢谢配合！
       - name: rtl
         if: github.event.label.name == 'rtl'
-        uses: actions-cool/issues-helper@v3
+        uses: actions-cool/issues-helper@200c78641dbf33838311e5a1e0c31bbdb92d7cf0 # v3
         with:
           actions: 'add-assignees'
           assignees: 'xrkffgg'
